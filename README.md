@@ -12,20 +12,20 @@ Document ref: GTWCI/CYB/CEH-PRAC/WAH-01 · Version 1.0
 | Student ID / cohort | 155 |
 | Date issued | 3/11/2026 |
 | Submission deadline | 6/11/2026 |
-| GitHub repository URL | ______________________ |
+| GitHub repository URL | https://github.com/Moxart-x/GTWCI-CEH-WebAppHacking-155.git|
 
 ## Candidate declaration
 
 > I confirm that this practical examination is my own work. I carried out all testing ethically and lawfully, only against the authorised, intentionally vulnerable targets in an isolated laboratory, and at no point accessed, scanned or attacked any system I do not own or am not authorised to test. I understand that any breach of these terms, or any plagiarism or fabricated evidence, will result in a mark of zero and may be reported.
 
-**Name:** Hamzat Habeeb Adeyemi &nbsp;&nbsp; **Student ID:** 155 &nbsp;&nbsp; **Date:** ______________________
+**Name:** Hamzat Habeeb Adeyemi &nbsp;&nbsp; **Student ID:** 155 &nbsp;&nbsp; **Date:** 5/11/2026
 
 ## Lab environment
 
 - **Attacker:** Kali Linux (IP: 10.10.1.6)
 - **Target server:** tc-corp-server — TechCapacity vulnerable lab VM (IP: 10.10.1.246) — isolated / host-only network, no internet exposure
 - **Apps on the target:** OWASP Mutillidae II (Task 1), DVWA (Task 2)
-- **Tools used:** ______________________ (e.g. Burp Suite, hydra, crunch, nmap, Firefox)
+- **Tools used:** Burp Suite, hydra, crunch, nmap, Firefox
 
 ## Contents
 
