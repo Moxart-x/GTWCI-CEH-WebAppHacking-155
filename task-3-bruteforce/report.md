@@ -29,19 +29,19 @@ Scan the tc-corp-server host for exposed services, create a password wordlist, a
 
 ## 4. Evidence (screenshots)
 
-![01 — nmap scan results](screenshots/01-nmap-scan.png)
+![01 — nmap scan results](screenshots/01-nmap-scan.jpg)
 Note: Full TCP scan of 10.10.1.246 showing 30+ open ports and fingerprinted service versions, including ssh (OpenSSH 10.0p2).
 
-![02 — crunch wordlist generation](screenshots/02-crunch-wordlist.png)
+![02 — crunch wordlist generation](screenshots/02-crunch-wordlist.jpg)
 Note: `crunch 4 6 0123456789 -o wordlist.txt` generating a 1,110,000-line numeric candidate list.
 
-![03 — initial hydra run against the large wordlist](screenshots/03-hydra-large-wordlist-attempt.png)
+![03 — initial hydra run against the large wordlist](screenshots/03-hydra-large-wordlist-attempt.jpg)
 Note: hydra launched against the 1.1M-entry numeric wordlist; stopped as impractically slow for the exam timeframe.
 
-![04 — hand-crafted wordlist in nano](screenshots/04-nano-small-wordlist.png)
+![04 — hand-crafted wordlist in nano](screenshots/04-nano-small-wordlist.jpg)
 Note: 11-entry targeted wordlist of common weak passwords, built directly in nano.
 
-![05 — hydra result against the targeted wordlist](screenshots/05-hydra-small-wordlist-result.png)
+![05 — hydra result against the targeted wordlist](screenshots/05-hydra-small-wordlist-result.jpg)
 Note: hydra completed its run against small-wordlist.txt — "1 of 1 target completed, 0 valid password found."
 
 ## 5. Analysis

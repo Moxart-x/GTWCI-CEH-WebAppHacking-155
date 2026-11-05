@@ -31,19 +31,22 @@ Identify and exploit a SQL-injection vulnerability in OWASP Mutillidae II (hoste
 
 ## 4. Evidence (screenshots)
 
-![01 — injection point identified](screenshots/01-injection-point.png)
-Note: ____________________________________
+![01 — injection point identified](screenshots/01-injection-point-sql-error.jpg)
+Note: Single quote submitted in the Username field returns a raw MariaDB syntax error, exposing the underlying query and confirming the field is unsanitized.
 
-![02 — baseline / control request](screenshots/02-baseline.png)
-Note: ____________________________________
+![02 — baseline / control request](screenshots/02-baseline-password-incorrect.jpg)
+Note: Baseline — a normal login attempt returns a generic "Password incorrect" message, establishing standard application behaviour before injection testing.
 
-![03 — payload testing](screenshots/03-payload-test.png)
-Note: ____________________________________
+![03 — failed payload variant](screenshots/03-failed-payload-account-not-exist.jpg)
+Note: An earlier payload variant, `' OR '1'='1' -- -`, returned "Account does not exist" — a failed attempt logged as part of the ordered payload trail.
 
-![04 — successful access / data extracted](screenshots/04-success.png)
-Note: ____________________________________
+![04 — successful payload before submission](screenshots/04-successful-payload-before-submit.jpg)
+Note: The successful payload, `' OR 1=1#`, entered in the Username field immediately before submission.
 
-![05 — View Log confirming the attack server-side](screenshots/05-view-log-confirmation.png)
+![05 — successful access](screenshots/05-success-logged-in-admin.jpg)
+Note: Successful authentication bypass — logged in as "admin" without a valid password, confirmed by the "Logged In Admin: admin" banner.
+
+![06 — View Log confirming the attack server-side](screenshots/06-view-log-confirmation.jpg)
 Note: Mutillidae's internal log independently records the successful payload (`' OR 1=1#`) and its outcome (`Login Succeeded: Logged in user: admin (1)`), alongside the earlier failed `' OR '1'='1' -- -` attempt — corroborating the browser-side evidence above.
 
 ## 5. Analysis

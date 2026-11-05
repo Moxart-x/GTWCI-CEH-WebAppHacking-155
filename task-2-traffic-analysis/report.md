@@ -39,23 +39,23 @@ Every authenticated request after login (e.g. the Brute Force page GET) carries 
 
 ## 4. Evidence (screenshots)
 
-![01 — Burp proxy listener running on 127.0.0.1:8080](screenshots/01-burp-listener.png)
+![01 — Burp proxy listener running on 127.0.0.1:8080](screenshots/01-burp-listener.jpg)
 Note: Confirms Burp's Proxy listener is active and ready to receive Firefox's traffic.
 
-![02 — Firefox manual proxy configuration](screenshots/02-firefox-proxy-config.png)
+![02 — Firefox manual proxy configuration](screenshots/02-firefox-proxy-config.jpg)
 Note: Firefox's Connection Settings configured to route HTTP and HTTPS traffic through 127.0.0.1:8080 (Burp).
 
-![03 — Burp CA certificate imported into Firefox](screenshots/03-ca-cert-import.png)
+![03 — Burp CA certificate imported into Firefox](screenshots/03-ca-cert-import.jpg)
 Note: Burp's CA certificate added under Firefox's trusted Authorities, enabling HTTPS interception.
 
-![04 — Burp Intercept confirmed capturing live traffic](screenshots/04-intercept-confirmed.png)
+![04 — Burp Intercept confirmed capturing live traffic](screenshots/04-intercept-confirmed.jpg)
 Note: Intercept tab shows the request to http://10.10.1.246/DVWA/ held by Burp, proving the Firefox-to-Burp proxy chain works end to end.
 
-![05 — Captured login POST request](screenshots/05-login-post-request.png)
-Note: Full DVWA login submission captured in Burp's HTTP history — method POST, body contains username, password, Login, and user_token parameters.
+![05 — Intercept tab showing the captured DVWA request](screenshots/05-intercept-dvwa-request.jpg)
+Note: The request to http://10.10.1.246/DVWA/ held in Burp's Intercept tab, confirming the proxy chain captures traffic end to end.
 
-![06 — Captured authenticated GET request](screenshots/06-authenticated-get-request.png)
-Note: A subsequent GET to the Brute Force module page, showing the session (PHPSESSID) and security-level cookies sent automatically on every request after login.
+![06 — Captured login POST request](screenshots/06-login-post-request.jpg)
+Note: Full DVWA login submission captured in Burp's HTTP history — method POST, body contains username, password, Login, and user_token parameters.
 
 ## 5. Analysis
 
